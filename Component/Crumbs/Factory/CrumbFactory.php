@@ -13,7 +13,7 @@
 
 namespace CCDNUser\AdminBundle\Component\Crumbs\Factory;
 
-use Symfony\Bundle\FrameworkBundle\Translation\Translator;
+use Symfony\Component\Translation\TranslatorInterface;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 
 use CCDNUser\AdminBundle\Component\Crumbs\Factory\CrumbTrail;
@@ -46,10 +46,10 @@ class CrumbFactory
     /**
      *
      * @access public
-     * @param \Symfony\Bundle\FrameworkBundle\Translation\Translator $translator
+     * @param TranslatorInterface $translator
      * @param \Symfony\Bundle\FrameworkBundle\Routing\Router         $router
      */
-    public function __construct(Translator $translator, Router $router)
+    public function __construct(TranslatorInterface $translator, Router $router)
     {
         $this->translator = $translator;
         $this->router = $router;
